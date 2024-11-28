@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html lang="en" class="ferra" dir="ltr">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>Community</title>
+
+
+    <!-- Custom HTML head -->
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/general.css">
+    <link rel="stylesheet" href="../../css/chrome.css">
+    <link rel="stylesheet" href="../../css/print.css" media="print">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../../fonts/fonts.css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="../../highlight.css">
+    <link rel="stylesheet" href="../../tomorrow-night.css">
+    <link rel="stylesheet" href="../../ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    <link rel="stylesheet" href="../../custom.css">
+
+</head>
+
+<body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ferra" : "ferra";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('ferra')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Halloy</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="guides/getting-started.html"><strong aria-hidden="true">2.</strong> Getting started</a></li><li class="chapter-item expanded "><a href="get-in-touch.html"><strong aria-hidden="true">3.</strong> Get in touch</a></li><li class="chapter-item expanded affix "><li class="part-title">Guides</li><li class="chapter-item expanded "><a href="guides/connect-with-soju.html"><strong aria-hidden="true">4.</strong> Connect with soju</a></li><li class="chapter-item expanded "><a href="guides/connect-with-znc.html"><strong aria-hidden="true">5.</strong> Connect with ZNC</a></li><li class="chapter-item expanded "><a href="guides/portable-mode.html"><strong aria-hidden="true">6.</strong> Portable mode</a></li><li class="chapter-item expanded "><a href="guides/multiple-servers.html"><strong aria-hidden="true">7.</strong> Multiple servers</a></li><li class="chapter-item expanded "><a href="guides/password-file.html"><strong aria-hidden="true">8.</strong> Storing passwords in a File</a></li><li class="chapter-item expanded "><a href="guides/text-formatting.html"><strong aria-hidden="true">9.</strong> Text Formatting</a></li><li class="chapter-item expanded "><a href="guides/monitor-users.html"><strong aria-hidden="true">10.</strong> Monitor users</a></li><li class="chapter-item expanded affix "><li class="part-title">Configuration</li><li class="chapter-item expanded "><a href="configuration/index.html"><strong aria-hidden="true">11.</strong> Configuration</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="configuration/buffer/index.html"><strong aria-hidden="true">11.1.</strong> Buffer</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="configuration/buffer/away.html"><strong aria-hidden="true">11.1.1.</strong> Away</a></li><li class="chapter-item expanded "><a href="configuration/buffer/channel/index.html"><strong aria-hidden="true">11.1.2.</strong> Channel</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="configuration/buffer/channel/nicklist.html"><strong aria-hidden="true">11.1.2.1.</strong> Nicklist</a></li><li class="chapter-item expanded "><a href="configuration/buffer/channel/message.html"><strong aria-hidden="true">11.1.2.2.</strong> Message</a></li><li class="chapter-item expanded "><a href="configuration/buffer/channel/topic.html"><strong aria-hidden="true">11.1.2.3.</strong> Topic</a></li></ol></li><li class="chapter-item expanded "><a href="configuration/buffer/internal_messages/index.html"><strong aria-hidden="true">11.1.3.</strong> Internal Messages</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="configuration/buffer/internal_messages/success.html"><strong aria-hidden="true">11.1.3.1.</strong> Success</a></li><li class="chapter-item expanded "><a href="configuration/buffer/internal_messages/error.html"><strong aria-hidden="true">11.1.3.2.</strong> Error</a></li></ol></li><li class="chapter-item expanded "><a href="configuration/buffer/nickname.html"><strong aria-hidden="true">11.1.4.</strong> Nickname</a></li><li class="chapter-item expanded "><a href="configuration/buffer/server_messages/index.html"><strong aria-hidden="true">11.1.5.</strong> Server Messages</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="configuration/buffer/server_messages/change_host.html"><strong aria-hidden="true">11.1.5.1.</strong> Change Host</a></li><li class="chapter-item expanded "><a href="configuration/buffer/server_messages/join.html"><strong aria-hidden="true">11.1.5.2.</strong> Join</a></li><li class="chapter-item expanded "><a href="configuration/buffer/server_messages/monitored_offline.html"><strong aria-hidden="true">11.1.5.3.</strong> Monitored Offline</a></li><li class="chapter-item expanded "><a href="configuration/buffer/server_messages/monitored_online.html"><strong aria-hidden="true">11.1.5.4.</strong> Monitored_Online</a></li><li class="chapter-item expanded "><a href="configuration/buffer/server_messages/part.html"><strong aria-hidden="true">11.1.5.5.</strong> Part</a></li><li class="chapter-item expanded "><a href="configuration/buffer/server_messages/quit.html"><strong aria-hidden="true">11.1.5.6.</strong> Quit</a></li><li class="chapter-item expanded "><a href="configuration/buffer/server_messages/topic.html"><strong aria-hidden="true">11.1.5.7.</strong> Topic</a></li></ol></li><li class="chapter-item expanded "><a href="configuration/buffer/text_input.html"><strong aria-hidden="true">11.1.6.</strong> Text Input</a></li><li class="chapter-item expanded "><a href="configuration/buffer/timestamp.html"><strong aria-hidden="true">11.1.7.</strong> Timestamp</a></li><li class="chapter-item expanded "><a href="configuration/buffer/chat_history.html"><strong aria-hidden="true">11.1.8.</strong> Chat History</a></li></ol></li><li class="chapter-item expanded "><a href="configuration/file_transfer/index.html"><strong aria-hidden="true">11.2.</strong> File Transfer</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="configuration/file_transfer/server.html"><strong aria-hidden="true">11.2.1.</strong> Server</a></li></ol></li><li class="chapter-item expanded "><a href="configuration/font.html"><strong aria-hidden="true">11.3.</strong> Font</a></li><li class="chapter-item expanded "><a href="configuration/keyboard.html"><strong aria-hidden="true">11.4.</strong> Keyboard</a></li><li class="chapter-item expanded "><a href="configuration/notifications.html"><strong aria-hidden="true">11.5.</strong> Notifications</a></li><li class="chapter-item expanded "><a href="configuration/pane/index.html"><strong aria-hidden="true">11.6.</strong> Pane</a></li><li class="chapter-item expanded "><a href="configuration/proxy.html"><strong aria-hidden="true">11.7.</strong> Proxy</a></li><li class="chapter-item expanded "><a href="configuration/scale-factor.html"><strong aria-hidden="true">11.8.</strong> Scale factor</a></li><li class="chapter-item expanded "><a href="configuration/servers/index.html"><strong aria-hidden="true">11.9.</strong> Servers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="configuration/servers/sasl/index.html"><strong aria-hidden="true">11.9.1.</strong> SASL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="configuration/servers/sasl/plain.html"><strong aria-hidden="true">11.9.1.1.</strong> Plain</a></li><li class="chapter-item expanded "><a href="configuration/servers/sasl/external.html"><strong aria-hidden="true">11.9.1.2.</strong> External</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="configuration/sidebar/index.html"><strong aria-hidden="true">11.10.</strong> Sidebar</a></li><li class="chapter-item expanded "><a href="configuration/themes/index.html"><strong aria-hidden="true">11.11.</strong> Themes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="configuration/themes/community.html"><strong aria-hidden="true">11.11.1.</strong> Community</a></li></ol></li><li class="chapter-item expanded "><a href="configuration/tooltips.html"><strong aria-hidden="true">11.12.</strong> Tooltips</a></li></ol></li><li class="chapter-item expanded "><a href="url-schemes.html"><strong aria-hidden="true">12.</strong> URL Schemes</a></li><li class="chapter-item expanded "><a href="commands.html"><strong aria-hidden="true">13.</strong> Commands</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function (e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
+                            title="Toggle Table of Contents" aria-label="Toggle Table of Contents"
+                            aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme"
+                            aria-label="Change theme" aria-haspopup="true" aria-expanded="false"
+                            aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ferra">Ferra</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                            aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/squidowl/halloy" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/squidowl/halloy/edit/main/book/src/configuration/themes/community.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..."
+                            aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="community"><a class="header" href="#community">Community</a></h1>
+<p>This is a list of community created themes for Halloy.</p>
+<blockquote>
+<p>💡 Have a great theme you want to share? Open a pull-request <a href="https://github.com/squidowl/halloy/pulls">here</a>.</p>
+</blockquote>
+<h2 id="oxocarbon"><a class="header" href="#oxocarbon">Oxocarbon</a></h2>
+<p><a href="halloy:///theme?e=ABYWFv8BJiYm_wImJib_A76V__8E8vT4_wVSUlL_Br6V__8HQr5l_wjuU5b_CT3b2f8KFhYW_wsfHh7_DBwcHP8NJiYm_w5jUIH_D76V__8QQDZP_xFCvmX_EjApOv8TOTk5_xRSUlL_FXip__8d_362_x4AAAAAHx0dHf8gJycn_yE2Njb_IiQkJP8jKCgo_yRANk__JVFDZ_8">Open in Halloy</a></p>
+<img src="oxocarbon.png">
+<h2 id="dracula"><a class="header" href="#dracula">Dracula</a></h2>
+<p><a href="halloy:///theme?e=ACgqNv8BHR8n_wJER1r_A2JypP8E-Pjy_wVyd5T_Br2T-v8HUPp7_wj_VVX_Cf-4bP8KHyIt_wsaGyT_DBobJP8NAAAAAA5Q-nv_D_95xv8QKy46_xH_ecb_EjU5R_8TkZKT_xTAwb__FYvp_f8d8fqM_x4oKjb_HygqNv8gPT1R_yExMUH_IisuOv8jMjZE_yQ7Nk7_JVZKcv8">Open in Halloy</a></p>
+<img src="dracula.png">
+<h2 id="gruvbox"><a class="header" href="#gruvbox">Gruvbox</a></h2>
+<p><a href="halloy:///theme?e=ACgoKP8BkoN0_wI8ODb_A7Fihv8E69uy_wWomYT_BrFihv8HmJca_wjMJB3_CdZdDv8KHSAh_wsoKCj_DB8hIf8NAAAAAA6Sg3T_D2idWv8QPDg2_xGOwHz_Ej05N_8TZlxU_xSSg3T_FUWFiP8d15kh_x4AAAAAHy4uLv8gMjIy_yE5OTn_IiImJ_8jJSor_yRBPDf_JVpSSv8">Open in Halloy</a></p>
+<img src="gruvbox.png">
+<h2 id="catppuccin-latte"><a class="header" href="#catppuccin-latte">Catppuccin Latte</a></h2>
+<p><a href="halloy:///theme?e=ANzg6P8BnKCw_wLM0Nr_A4g57_8ETE9p_wVsb4X_Bog57_8HQKAr_wjSDzn_Cf5kC_8K5unv_wvv8fX_DO_x9f8N3ODo_w7MuO__D3KH_f8Q1cnv_xEEpeX_ErXM9f8TnqG2_xSMj6H_FR5m9f8d344d_x4AAAAAH9bZ4f8gwcTK_yG3usD_IuPn7f8j1dne_yTUyO__JcKk7_8">Open in Halloy</a></p>
+<img src="catppuccin-latte.png">
+<h2 id="catppuccin-macchiato"><a class="header" href="#catppuccin-macchiato">Catppuccin Macchiato</a></h2>
+<p><a href="halloy:///theme?e=ABgZJv8BbnON_wIkJzr_A8ag9v8EytP1_wWlrcv_Bsag9v8HptqV_wjth5b_CfWpf_8KHiAw_wskJzr_DCQnOv8NGBkm_w5MQWP_D7e9-P8QWUx2_xGR1-P_EiwySv8TW2B2_xSAh6L_FYqt9P8d7tSf_x4AAAAAHx4fL_8gIiM1_yEnKD3_IiksQv8jMjVQ_yRKQGL_JY10sf8">Open in Halloy</a></p>
+<img src="catppuccin-macchiato.png">
+<h2 id="catppuccin-mocha"><a class="header" href="#catppuccin-mocha">Catppuccin Mocha</a></h2>
+<p><a href="halloy:///theme?e=ABERG_8BbHCG_wIeHi7_A8um9_8Ezdb0_wWmrcj_Bsum9_8HpuOh_wjzi6j_Cfqzh_8KGBgl_wseHi7_DB4eLv8NEREb_w5MQWP_D7e9-P8QWUx2_xGJ3Ov_EiwySv8TWFpu_xR_hJz_FYm0-v8d-eKv_x4AAAAAHxoaKf8gHh4v_yEiIjb_IiMjNv8jKytC_yRMQWP_JWhXhv8">Open in Halloy</a></p>
+<img src="catppuccin-mocha.png">
+<h2 id="ferra-light"><a class="header" href="#ferra-light">Ferra Light</a></h2>
+<p><a href="halloy:///theme?e=APTs5v8B3dDI_wLp2c7_A_-gev8EaFZQ_wWnmJH_BqNSxf8HdIYt_wjfUl7_CXSGLf8K8ebe_wvu4NX_DO_i2P8NAAAAAA7HubH_D6NSxf8Q9NbH_xHESGz_EubGw_8Trp2V_xSrinn_FWNg1v8dwZMX_x707Ob_H_Hl3f8g6trQ_yHm1cn_IunVyP8j38Kt_yTZ0bv_JcnFp_8">Open in Halloy</a></p>
+<img src="ferra-light.png">
+<h2 id="booberry"><a class="header" href="#booberry">Booberry</a></h2>
+<p><a href="halloy:///theme?e=AEUoWf8B27_v_wJUMm__Aza_hv8E2Mjz_wWtlr7_BuzNuv8HoPKP_wj0eGj_CejcoP8KOiJM_wsxHUH_DDYgR_8NAAAAAA6koOj_D8zMzP8QZFRv_xGg8o__ElBJbf8TgG2N_xTbv-__FYLOz_8d_80d_x4AAAAAH08uZf8gVDFs_yFWMm7_Ij8mU_8jRCla_ySFcpP_JcGo0_8">Open in Halloy</a></p>
+<img src="booberry.png">
+<h2 id="one-dark"><a class="header" href="#one-dark">One Dark</a></h2>
+<p><a href="halloy:///theme?e=ACAkKv8Bc3Nz_wJgY2j_A_-MAP8Eu7u7_wWHjpv_BvRHR_8Hicp4_wjHVFD_CdVf3v8KKCw0_wsxN0H_DDE3Qf8NO0BI_w5gY2j_D4eOm_8QQlV7_xGJynj_EkBIWf8Tc3mE_xSHjpv_FWGv7_8dNZLE_x4AAAAAHzU6Rv8gREta_yFES1r_IiAkKv8jNTpG_yRES1r_JURLWv8">Open in Halloy</a></p>
+<img src="one-dark.png">
+<h2 id="intellij-light"><a class="header" href="#intellij-light">IntelliJ Light</a></h2>
+<p><a href="halloy:///theme?e=AP____8Bv7-__wLg4OD_AwCN3v8ECAgI_wVBTUH_Bv8AAP8HsNGr_wjbWGD_CQBtzP8K_____wvw8PD_DPDw8P8N5ubm_w7g4OD_D0FNQf8QzMz__xEAjd7_EqbS__8TgICA_xRBTUH_FQBtzP8dOJ_W_x4AAAAAH9bW1v8g4ODg_yHg4OD_Iv____8j1tbW_yTg4OD_JeDg4P8">Open in Halloy</a></p>
+<img src="intellij-light.png">
+<h2 id="macaw-light"><a class="header" href="#macaw-light">Macaw Light</a></h2>
+<p><a href="halloy:///theme?e=APHx8_8BtbW1_wLLzNf_AwB6__8EAAAA_wVsb4X_Bog57_8HlZWV_wiVlZX_CZWVlf8K_v___wvw8PD_DPDw8P8Nra2t_w6tra3_D3KH_f8Q1eD-_xFQbf__ErXM9f8TlZWV_xQAAAD_FR5m9f8dlZWV_x4AAAAAH-Li4v8g2tra_yHBwcH_Iu3t7f8j3t7e_yTs7Oz_Jenp6f8">Open in Halloy</a></p>
+<img src="macaw-light.png">
+<h2 id="macaw-dark"><a class="header" href="#macaw-dark">Macaw Dark</a></h2>
+<p><a href="halloy:///theme?e=ADMzM_8BUFBQ_wIzMzP_AyiE_P8E39_f_wXCwsL_Bog57_8HlZWV_wiVlZX_CZWVlf8KHh4e_wsuLi7_DC4uLv8NGhoa_w4aGhr_D3KH_f8QRUZF_xEAyP__End3d_8TlZWV_xTf39__FSiE_P8dlZWV_x4AAAAAH0hISP8gSkpK_yFmZmb_Ijs7O_8jSEhI_yRkZGT_JWZmZv8">Open in Halloy</a></p>
+ <img src="macaw-dark.png">
+<h2 id="zenburn"><a class="header" href="#zenburn">Zenburn</a></h2>
+<p><a href="halloy:///theme?e=ADg4OP8BrtYA_wJGRkb_A16urv8E3NzM_wWVlYr_BvDfr_8HX4cA_wjXXwD_Cf-4bP8KPz8__wsxMTH_DDExMf8NAAAAAA6u1gD_D_95xv8QPU9P_xH5nZj_EmFcT_8TYWFc_xTAwb__FYvp_f8dXq6u_x44ODj_Hy4uLv8gODg4_yEuLi7_Ij8_P_8jODg4_yQ4ODj_JTg4OP8">Open in Halloy</a></p>
+<img src="zenburn.png">
+<h2 id="solarized-dark"><a class="header" href="#solarized-dark">Solarized Dark</a></h2>
+<p><a href="halloy:///theme?e=AAArNv8Bk6Gh_wKToaH_A5Ohof8Eg5SW_wVYbnX_BpOhof8HhZkA_wjcMi__CctLFv8KACs2_wsHNkL_DAc2Qv8Ng5SW_w6ToaH_D9M2gv8QBzZC_xEmi9L_EgArNv8TWG51_xSDlJb_FSqhmP8dWG51_x4AKzb_Hwc2Qv8gBzZC_yEHNkL_IgArNv8jBzZC_yQHNkL_JQc2Qv8">Open in Halloy</a></p>
+<img src="solarized-dark.png">
+<h2 id="cyberpunk"><a class="header" href="#cyberpunk">Cyberpunk</a></h2>
+<p><a href="halloy:///theme?e=AAoOFP8BLjxJ_wIbHyf_AwD_2f8EOf8U_wUAv___Bv8A__8HAP-d_wj_TEz_CQD_mf8KDQ8U_wsRFRz_DBsfJ_8NAAAAAA4A_9n_Dzn_FP8QiwCL_xH_AP__EhoeJf8TYHCL_xQAv___FQC___8d_9cA_x4KDhT_Hx0jL_8gDRIY_yEUGiH_IhsfJ_8jJCoz_yQuPEn_JTlFVP8">Open in Halloy</a></p>
+<img src="cyberpunk.png">
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <a rel="prev" href="../../configuration/themes/index.html" class="mobile-nav-chapters previous"
+                            title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+
+                        <a rel="next prefetch" href="../../configuration/tooltips.html" class="mobile-nav-chapters next"
+                            title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                <a rel="prev" href="../../configuration/themes/index.html" class="nav-chapters previous" title="Previous chapter"
+                    aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                <a rel="next prefetch" href="../../configuration/tooltips.html" class="nav-chapters next" title="Next chapter"
+                    aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+</body>
+
+</html>
